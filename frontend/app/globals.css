@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.20);
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  color-scheme: dark;
+}
