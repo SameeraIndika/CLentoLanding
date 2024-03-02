@@ -1,8 +1,6 @@
 import { Figtree } from 'next/font/google'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
-
-
 import './globals.css'
 
 const font = Figtree({ subsets: ['latin'] })
@@ -21,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <UserProvider>
-            <ModalProvider />
+          <ModalProvider />
             {children}
             <video
               src={require('./../public/bubble-bg.mp4')} 
@@ -41,5 +39,5 @@ export default function RootLayout({
           </UserProvider>
       </body>
     </html>
-  )
+  );
 }
