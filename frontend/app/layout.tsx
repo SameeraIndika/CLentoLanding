@@ -1,7 +1,6 @@
 import { Figtree } from 'next/font/google'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
-import SupabaseProvider from '@/providers/SupabaseProvider'
 
 
 import './globals.css'
@@ -21,8 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <SupabaseProvider>
-          <UserProvider>
+        <UserProvider>
             <ModalProvider />
             {children}
             <video
@@ -41,7 +39,6 @@ export default function RootLayout({
               }}
             />
           </UserProvider>
-        </SupabaseProvider>
       </body>
     </html>
   )
